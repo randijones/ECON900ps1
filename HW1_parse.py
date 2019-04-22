@@ -17,9 +17,9 @@ for one_file_name in glob.glob("HW1_files/*.html"):
 	soup = BeautifulSoup(f.read(), 'html.parser')
 	f.close()
 	table = soup.find("table", {"id": "currencies-all"})
-	tbody = currencies_table.find("tbody")
-	rows = currencies_tbody.find_all("tr")
-	for r in currency_rows:
+	tbody = table.find("tbody")
+	rows = tbody.find_all("tr")
+	for r in rows:
 		currency_short_name = r.find("td", {"class": "currency-name"}).find("span",{"class":"currency-symbol"}).find("a").text
 		currency_name = r.find("td", {"class": "currency-name"}).find("a",{"class":"currency-name-container"}).text
 		currency_market_cap = r.find("td", {"class": "market-cap"})['data-sort']
