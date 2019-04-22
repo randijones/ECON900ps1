@@ -20,7 +20,7 @@ for i in range(5):
 	html=response.read()
 	f.write(html)
 	f.close()
-	time.sleep(1800)
+	time.sleep(900)
 
 	
 
