@@ -54,27 +54,12 @@ for i in range(500):
 	f.close()
 	time.sleep(20)
 
-# time.sleep(10)
+
 
 
 
 	
 
-
-
-
-
-
-
-#for i in href_link[1:2]:
-	#url= ("https://coinmarketcap.com" + i + "historical-data/")
-	#print(url)
-
-	#response=urllib.request.urlopen(url)
-	#html=response.read()
-	#f.write(html)
-	#print(html)
-	#f.close()
 
 
 
