@@ -12,7 +12,7 @@ Use HW1_parse.py to parse the data scraped using the HW1_Request.py file.
 Use HW1_histdata_parse.py to parse the historical data scraped for the first 500 currencies. 
 
 # HW1_Reqest.py
-
+```
 for i in range(5):
 	time_stamp=datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S')
 	print(str(i) + ": " + time_stamp)
@@ -21,7 +21,7 @@ for i in range(5):
 	response=urllib.request.urlopen(url)
 	html=response.read()
 	f.write(html)
-  
+```  
   This code will give you the 
 
 
