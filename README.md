@@ -165,7 +165,7 @@ df.to_csv("parsed_files/historical_dataset.csv")
 Finally, we append the Data Frame columns with the values found in the last part of the code. We then convert the data frame to a csv file for easier reading and future analysis. 
 
 # HW1_regression.py
-``
+```
 target = df.iloc[:,2].values
 data = df.iloc[:,4:6]
 
@@ -181,10 +181,10 @@ X = [
 
 results = regression.predict(X)
 print(results)
-``
+```
 The first regression analysis is a simple linear regression with 2 dependent variables, day_low and close_price, and a response variable, open_price. This code tells the computer to identify the response and independent variables from the dataframe, then predict a linear regression of the variables with the values identified (lines 177-180). 
 
-``
+```
 N= 300
 open_price=df.iloc[:,2]
 day_low=df.iloc[:,4]
@@ -192,11 +192,11 @@ plt.scatter(day_low, open_price, color='g')
 plt.xlabel('day_low')
 plt.ylabel('open_price')
 plt.show()
-``
+```
 
 Output of this code will be the scatter plot of open_price and day_low.
 
-``
+```
 N=300
 open_price=df.iloc[:,2]
 close_price=df.iloc[:,5]
@@ -204,11 +204,11 @@ plt.scatter(close_price, open_price, color='r')
 plt.xlabel('close_price')
 plt.ylabel('open_price')
 plt.show()
-``
+```
 
 Output of this code will be the scatter plot of open_price and close_price.
 
-``
+```
 df['close']=df.iloc[:,5]
 print (df['close'])
 
@@ -217,22 +217,22 @@ target=df['open']
 model=sm.OLS(target,data).fit()
 predictions=model.predict(data)
 model.summary()
-``
+```
 
 This code will provide a summary regression table of close_price and open_price, not including a constant.
 
-``
+```
 data=df['close']
 target=df['open']
 data = sm.add_constant(data)
 model=sm.OLS(target, data).fit()
 predictions=model.predict(data)
 model.summary()
-``
+```
 
 This code will provide a summary regression table of close_price and open_price, including a constant. 
 
-``
+```
 df['close']= df.iloc[:,5]
 df['day_high']=df.iloc[:,3]
 
@@ -242,11 +242,11 @@ data = sm.add_constant(data)
 model=sm.OLS(target, data).fit()
 predictions=model.predict(data)
 model.summary()
-``
+```
 
 This code will provide a summary regression table of close_price and day_high, including a constant. 
 
-``
+```
 df['close']= df.iloc[:,5]
 df['day_low']=df.iloc[:,4]
 
@@ -256,7 +256,7 @@ data = sm.add_constant(data)
 model=sm.OLS(target, data).fit()
 predictions=model.predict(data)
 model.summary()
-``
+```
 
 This code will provide a summary regression table of close_price and day_low, including a constant. 
 
