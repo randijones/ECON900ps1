@@ -193,6 +193,7 @@ plt.xlabel('day_low')
 plt.ylabel('open_price')
 plt.show()
 ``
+
 Output of this code will be the scatter plot of open_price and day_low.
 
 ``
@@ -204,6 +205,7 @@ plt.xlabel('close_price')
 plt.ylabel('open_price')
 plt.show()
 ``
+
 Output of this code will be the scatter plot of open_price and close_price.
 
 ``
@@ -216,6 +218,7 @@ model=sm.OLS(target,data).fit()
 predictions=model.predict(data)
 model.summary()
 ``
+
 This code will provide a summary regression table of close_price and open_price, not including a constant.
 
 ``
@@ -226,6 +229,7 @@ model=sm.OLS(target, data).fit()
 predictions=model.predict(data)
 model.summary()
 ``
+
 This code will provide a summary regression table of close_price and open_price, including a constant. 
 
 ``
@@ -239,6 +243,7 @@ model=sm.OLS(target, data).fit()
 predictions=model.predict(data)
 model.summary()
 ``
+
 This code will provide a summary regression table of close_price and day_high, including a constant. 
 
 ``
@@ -252,6 +257,7 @@ model=sm.OLS(target, data).fit()
 predictions=model.predict(data)
 model.summary()
 ``
+
 This code will provide a summary regression table of close_price and day_low, including a constant. 
 
 # That's All Folks!
